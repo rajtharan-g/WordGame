@@ -18,66 +18,87 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tNu-GE-XI1">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" alwaysBounceHorizontal="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="frL-Dc-wRL">
                                 <rect key="frame" x="0.0" y="124" width="320" height="320"/>
-                                <subviews>
-                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="frL-Dc-wRL">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="320"/>
-                                        <color key="backgroundColor" red="0.31657342049999998" green="0.039405069959999997" blue="0.48221367389999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <collectionViewLayout key="collectionViewLayout" id="GFM-fc-Hxg" customClass="InvertedStackLayout" customModule="WordGame" customModuleProvider="target"/>
-                                        <cells>
-                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="wordCell" id="47p-ds-8pJ" customClass="WordCollectionViewCell" customModule="WordGame" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RAV-9W-etV">
-                                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                    </subviews>
-                                                </view>
-                                                <constraints>
-                                                    <constraint firstItem="RAV-9W-etV" firstAttribute="top" secondItem="47p-ds-8pJ" secondAttribute="top" id="5MA-Gf-QlI"/>
-                                                    <constraint firstAttribute="trailing" secondItem="RAV-9W-etV" secondAttribute="trailing" id="VRi-n0-cR7"/>
-                                                    <constraint firstAttribute="bottom" secondItem="RAV-9W-etV" secondAttribute="bottom" id="WS5-hw-Gnd"/>
-                                                    <constraint firstItem="RAV-9W-etV" firstAttribute="leading" secondItem="47p-ds-8pJ" secondAttribute="leading" id="hD3-yt-mo5"/>
-                                                </constraints>
-                                                <connections>
-                                                    <outlet property="wordLabel" destination="RAV-9W-etV" id="A5G-kR-iQI"/>
-                                                </connections>
-                                            </collectionViewCell>
-                                        </cells>
-                                        <connections>
-                                            <outlet property="dataSource" destination="BYZ-38-t0r" id="KP3-kU-oVq"/>
-                                            <outlet property="delegate" destination="BYZ-38-t0r" id="OzH-2t-3QN"/>
-                                        </connections>
-                                    </collectionView>
-                                </subviews>
                                 <color key="backgroundColor" red="0.31657342049999998" green="0.039405069959999997" blue="0.48221367389999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstItem="frL-Dc-wRL" firstAttribute="leading" secondItem="tNu-GE-XI1" secondAttribute="leading" id="CVU-7a-tLZ"/>
-                                    <constraint firstItem="frL-Dc-wRL" firstAttribute="top" secondItem="tNu-GE-XI1" secondAttribute="top" id="KWK-np-6fo"/>
-                                    <constraint firstAttribute="width" secondItem="tNu-GE-XI1" secondAttribute="height" multiplier="5:5" id="czG-oJ-FCU"/>
-                                    <constraint firstAttribute="bottom" secondItem="frL-Dc-wRL" secondAttribute="bottom" id="hgM-ml-HBv"/>
-                                    <constraint firstAttribute="trailing" secondItem="frL-Dc-wRL" secondAttribute="trailing" id="rMU-dn-HZw"/>
+                                    <constraint firstAttribute="width" secondItem="frL-Dc-wRL" secondAttribute="height" multiplier="1:1" id="76Z-kd-9PE"/>
                                 </constraints>
-                            </view>
+                                <collectionViewLayout key="collectionViewLayout" id="GFM-fc-Hxg" customClass="CustomLayout" customModule="WordGame" customModuleProvider="target"/>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="wordCell" id="47p-ds-8pJ" customClass="WordCollectionViewCell" customModule="WordGame" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RAV-9W-etV">
+                                                    <rect key="frame" x="5" y="5" width="40" height="40"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="RAV-9W-etV" firstAttribute="top" secondItem="47p-ds-8pJ" secondAttribute="top" constant="5" id="5MA-Gf-QlI"/>
+                                            <constraint firstAttribute="trailing" secondItem="RAV-9W-etV" secondAttribute="trailing" constant="5" id="VRi-n0-cR7"/>
+                                            <constraint firstAttribute="bottom" secondItem="RAV-9W-etV" secondAttribute="bottom" constant="5" id="WS5-hw-Gnd"/>
+                                            <constraint firstItem="RAV-9W-etV" firstAttribute="leading" secondItem="47p-ds-8pJ" secondAttribute="leading" constant="5" id="hD3-yt-mo5"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="wordLabel" destination="RAV-9W-etV" id="A5G-kR-iQI"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="KP3-kU-oVq"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="OzH-2t-3QN"/>
+                                </connections>
+                            </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dgz-IT-6lc">
+                                <rect key="frame" x="70" y="499" width="180" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="1in-zX-l66"/>
+                                    <constraint firstAttribute="width" constant="180" id="m9o-Y3-UHE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <state key="normal" title="Add Random Word">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="addRandomWord:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9F0-bg-Qdy"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="tNu-GE-XI1" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Cl1-nz-gro"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tNu-GE-XI1" secondAttribute="trailing" id="VNX-e2-1uX"/>
-                            <constraint firstItem="tNu-GE-XI1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ZiP-gz-4IX"/>
-                            <constraint firstItem="tNu-GE-XI1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jhq-8Q-6LF"/>
-                            <constraint firstItem="tNu-GE-XI1" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="lIq-rY-xGH"/>
+                            <constraint firstItem="frL-Dc-wRL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Bi7-0w-NKQ"/>
+                            <constraint firstItem="frL-Dc-wRL" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="O65-Eg-OQ5"/>
+                            <constraint firstItem="frL-Dc-wRL" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="aQi-sk-U73"/>
+                            <constraint firstItem="dgz-IT-6lc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="m0b-ky-okk"/>
+                            <constraint firstItem="frL-Dc-wRL" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="n3B-ft-19b"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="dgz-IT-6lc" secondAttribute="bottom" constant="25" id="vq0-4H-zHz"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="aQi-sk-U73"/>
+                                <exclude reference="n3B-ft-19b"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="aQi-sk-U73"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="n3B-ft-19b"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="wordCollectionView" destination="frL-Dc-wRL" id="Q7f-qN-0V6"/>

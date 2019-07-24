@@ -8,10 +8,10 @@
 
 import UIKit
 
-class InvertedStackLayout: UICollectionViewLayout {
+class CustomLayout: UICollectionViewLayout {
     
     var cellSize: CGFloat = 0.0
-    var numOfCells = 0
+    let numOfTiles: Int = 5
     
     override func prepare() {
         super.prepare()
@@ -24,8 +24,7 @@ class InvertedStackLayout: UICollectionViewLayout {
                 let numberOfSectionItems = collectionView.numberOfItems(inSection: section)
                 for item in 0 ..< numberOfSectionItems {
                     let indexPath = IndexPath(item: item, section: section)
-                    let layoutAttr = layoutAttributesForItem(at: indexPath)
-                    if let layoutAttr = layoutAttr {
+                    if let layoutAttr = layoutAttributesForItem(at: indexPath) {
                         layoutAttrs.append(layoutAttr)
                     }
                 }
@@ -36,24 +35,33 @@ class InvertedStackLayout: UICollectionViewLayout {
     
     override func layoutAttributesForItem(at indexPath: IndexPath) -> UICollectionViewLayoutAttributes? {
         let layoutAttr = UICollectionViewLayoutAttributes(forCellWith: indexPath)
-        let x = self.collectionView!.bounds.width - (cellSize * (CGFloat(indexPath.item % 5) + 1.0))
-        let y = self.collectionView!.bounds.height - (cellSize * (CGFloat(indexPath.item / 5) + 1.0))
-        print("x -> \(x) y -> \(y)")
-        print("indexpath -> \(indexPath.item)")
-        layoutAttr.frame = CGRect(x: x, y: y, width: cellSize, height: cellSize)
+        
+        // Updating frame from the bottom right for each indexPath
+        if let collectionViewBounds = self.collectionView?.bounds {
+            let x = collectionViewBounds.width - (cellSize * (CGFloat(indexPath.item % numOfTiles) + 1.0))
+            let y = collectionViewBounds.height - (cellSize * (CGFloat(indexPath.item / numOfTiles) + 1.0))
+            layoutAttr.frame = CGRect(x: x, y: y, width: cellSize, height: cellSize)
+        }
         return layoutAttr
     }
     
     override var collectionViewContentSize: CGSize {
         get {
-            cellSize = self.collectionView!.bounds.size.height / 5.0
-            return CGSize(width: self.collectionView!.bounds.size.width / 5.0, height: self.collectionView!.bounds.size.height / 5.0)
+            if let collectionViewBounds = self.collectionView?.bounds {
+                if UIDevice.current.orientation.isLandscape {
+                    cellSize = UIScreen.main.bounds.height / CGFloat(numOfTiles)
+                } else {
+                    cellSize = UIScreen.main.bounds.width / CGFloat(numOfTiles)
+                }
+                return collectionViewBounds.size
+            }
+            return CGSize.zero
         }
     }
     
     override func shouldInvalidateLayout(forBoundsChange newBounds: CGRect) -> Bool {
         if let oldBounds = self.collectionView?.bounds, oldBounds.width != newBounds.width || oldBounds.height != newBounds.height {
-            return true
+            return true // Update layout only when the frame changes
         }
         return false
     }

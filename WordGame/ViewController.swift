@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  WordGame
 //
-//  Created by Rajtharan G on 06/07/19.
+//  Created by Rajtharan G on 24/07/19.
 //  Copyright © 2019 Rajtharan G. All rights reserved.
 //
 
@@ -12,12 +12,12 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var wordCollectionView: UICollectionView!
     
-    var layout: InvertedStackLayout!
+    var layout: CustomLayout!
     var words: [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        layout = InvertedStackLayout()
+        layout = CustomLayout()
         wordCollectionView.collectionViewLayout = layout
     }
     
@@ -26,13 +26,15 @@ class ViewController: UIViewController {
         FirebaseManager.shared.listenToFirebaseDB()
         FirebaseManager.shared.delegate = self
     }
-    
-    @objc func runTimedCode() {
-        self.layout.numOfCells = self.layout.numOfCells + 1
-        print("Counter --> \(self.layout.numOfCells - 1)")
-        self.wordCollectionView.reloadItems(at: [IndexPath(item: self.layout.numOfCells - 1, section: 0)])
-    }
 
+    
+    // MARK: - IBAction methods
+    
+    @IBAction func addRandomWord(_ sender: Any) {
+        let words = FirebaseManager.shared.randomizeAvailableLetters(tileCount: 1)
+        FirebaseManager.shared.updateWordToDB(words: words)
+    }
+    
 }
 
 extension ViewController: UICollectionViewDataSource {
@@ -51,10 +53,29 @@ extension ViewController: UICollectionViewDataSource {
     
 }
 
-extension ViewController: FirebaseManagerDelegate {
+extension ViewController: UICollectionViewDelegate {
     
-    func reloadCollectionView(words: [String]) {
-        self.words = words
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        if kind == UICollectionView.elementKindSectionHeader {
+            let view = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "header", for: indexPath)
+            let loading = UIActivityIndicatorView()
+            loading.style = .gray
+            loading.translatesAutoresizingMaskIntoConstraints = false
+            loading.tintColor = UIColor.gray
+            view.addSubview(loading)
+            return view
+        }
+        return UICollectionReusableView()
+    }
+    
+}
+
+extension ViewController: FirebaseManagerDelegate {
+
+    func reloadCollectionView(words: [String]?) {
+        if let words = words {
+            self.words = words
+        }
         wordCollectionView.reloadData()
     }
     

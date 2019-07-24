@@ -3,11 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		015934C4C845CB537478A33F /* Pods_WordGameTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B793F4554C9F5AC6715BCED /* Pods_WordGameTests.framework */; };
 		8551AD4A22E85464001BC6C8 /* InvertedStackLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8551AD4922E85464001BC6C8 /* InvertedStackLayout.swift */; };
+		855A8B2C22E8B8EE0064888B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 855A8B2B22E8B8EE0064888B /* GoogleService-Info.plist */; };
 		85C10DB622D06B6200C91888 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C10DB522D06B6200C91888 /* AppDelegate.swift */; };
 		85C10DB822D06B6200C91888 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C10DB722D06B6200C91888 /* ViewController.swift */; };
 		85C10DBB22D06B6200C91888 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85C10DB922D06B6200C91888 /* Main.storyboard */; };
@@ -15,8 +17,10 @@
 		85C10DC022D06B6400C91888 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85C10DBE22D06B6400C91888 /* LaunchScreen.storyboard */; };
 		85C10DCB22D06B6500C91888 /* WordGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C10DCA22D06B6500C91888 /* WordGameTests.swift */; };
 		85C10DD622D06B6500C91888 /* WordGameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C10DD522D06B6500C91888 /* WordGameUITests.swift */; };
-		85C10DE422D06B7500C91888 /* GameHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C10DE322D06B7500C91888 /* GameHelper.swift */; };
+		85C10DE422D06B7500C91888 /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C10DE322D06B7500C91888 /* FirebaseManager.swift */; };
 		85C10DE622D0720700C91888 /* WordCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C10DE522D0720700C91888 /* WordCollectionViewCell.swift */; };
+		9EC7D15940AD96BAEF4A8F94 /* Pods_WordGame.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DEFD72EA6E787576B0BEF7D /* Pods_WordGame.framework */; };
+		F8831617A1BE3A3534F9C7B4 /* Pods_WordGameUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7445A66001F65A59F8A14F4F /* Pods_WordGameUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +41,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0CE3153B95A7AA85B998751C /* Pods-WordGameUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WordGameUITests.release.xcconfig"; path = "Target Support Files/Pods-WordGameUITests/Pods-WordGameUITests.release.xcconfig"; sourceTree = "<group>"; };
+		2EC66C673F83A27448BD4674 /* Pods-WordGameTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WordGameTests.debug.xcconfig"; path = "Target Support Files/Pods-WordGameTests/Pods-WordGameTests.debug.xcconfig"; sourceTree = "<group>"; };
+		3411C6F3F14F53018CC9322B /* Pods-WordGame.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WordGame.debug.xcconfig"; path = "Target Support Files/Pods-WordGame/Pods-WordGame.debug.xcconfig"; sourceTree = "<group>"; };
+		5B793F4554C9F5AC6715BCED /* Pods_WordGameTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WordGameTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7445A66001F65A59F8A14F4F /* Pods_WordGameUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WordGameUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		852D385B6237496D26A7CE66 /* Pods-WordGame.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WordGame.release.xcconfig"; path = "Target Support Files/Pods-WordGame/Pods-WordGame.release.xcconfig"; sourceTree = "<group>"; };
 		8551AD4922E85464001BC6C8 /* InvertedStackLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvertedStackLayout.swift; sourceTree = "<group>"; };
+		855A8B2B22E8B8EE0064888B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		85C10DB222D06B6200C91888 /* WordGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WordGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85C10DB522D06B6200C91888 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		85C10DB722D06B6200C91888 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -51,8 +62,11 @@
 		85C10DD122D06B6500C91888 /* WordGameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WordGameUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		85C10DD522D06B6500C91888 /* WordGameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordGameUITests.swift; sourceTree = "<group>"; };
 		85C10DD722D06B6500C91888 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		85C10DE322D06B7500C91888 /* GameHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameHelper.swift; sourceTree = "<group>"; };
+		85C10DE322D06B7500C91888 /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
 		85C10DE522D0720700C91888 /* WordCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordCollectionViewCell.swift; sourceTree = "<group>"; };
+		8BC8108709A88CF76CAB8B26 /* Pods-WordGameTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WordGameTests.release.xcconfig"; path = "Target Support Files/Pods-WordGameTests/Pods-WordGameTests.release.xcconfig"; sourceTree = "<group>"; };
+		8DEFD72EA6E787576B0BEF7D /* Pods_WordGame.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WordGame.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A6F05D4C633BC261A777A69B /* Pods-WordGameUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WordGameUITests.debug.xcconfig"; path = "Target Support Files/Pods-WordGameUITests/Pods-WordGameUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9EC7D15940AD96BAEF4A8F94 /* Pods_WordGame.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				015934C4C845CB537478A33F /* Pods_WordGameTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,12 +90,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8831617A1BE3A3534F9C7B4 /* Pods_WordGameUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6A5BA9AFBF32653E07C746F3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8DEFD72EA6E787576B0BEF7D /* Pods_WordGame.framework */,
+				5B793F4554C9F5AC6715BCED /* Pods_WordGameTests.framework */,
+				7445A66001F65A59F8A14F4F /* Pods_WordGameUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		85C10DA922D06B6200C91888 = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +114,8 @@
 				85C10DC922D06B6500C91888 /* WordGameTests */,
 				85C10DD422D06B6500C91888 /* WordGameUITests */,
 				85C10DB322D06B6200C91888 /* Products */,
+				A2EDE37D3D68497574E0C17D /* Pods */,
+				6A5BA9AFBF32653E07C746F3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -109,9 +138,10 @@
 				85C10DBC22D06B6400C91888 /* Assets.xcassets */,
 				85C10DBE22D06B6400C91888 /* LaunchScreen.storyboard */,
 				85C10DC122D06B6400C91888 /* Info.plist */,
-				85C10DE322D06B7500C91888 /* GameHelper.swift */,
+				85C10DE322D06B7500C91888 /* FirebaseManager.swift */,
 				85C10DE522D0720700C91888 /* WordCollectionViewCell.swift */,
 				8551AD4922E85464001BC6C8 /* InvertedStackLayout.swift */,
+				855A8B2B22E8B8EE0064888B /* GoogleService-Info.plist */,
 			);
 			path = WordGame;
 			sourceTree = "<group>";
@@ -134,6 +164,19 @@
 			path = WordGameUITests;
 			sourceTree = "<group>";
 		};
+		A2EDE37D3D68497574E0C17D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3411C6F3F14F53018CC9322B /* Pods-WordGame.debug.xcconfig */,
+				852D385B6237496D26A7CE66 /* Pods-WordGame.release.xcconfig */,
+				2EC66C673F83A27448BD4674 /* Pods-WordGameTests.debug.xcconfig */,
+				8BC8108709A88CF76CAB8B26 /* Pods-WordGameTests.release.xcconfig */,
+				A6F05D4C633BC261A777A69B /* Pods-WordGameUITests.debug.xcconfig */,
+				0CE3153B95A7AA85B998751C /* Pods-WordGameUITests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -141,9 +184,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 85C10DDA22D06B6500C91888 /* Build configuration list for PBXNativeTarget "WordGame" */;
 			buildPhases = (
+				280630B72D92569461C51FD8 /* [CP] Check Pods Manifest.lock */,
 				85C10DAE22D06B6200C91888 /* Sources */,
 				85C10DAF22D06B6200C91888 /* Frameworks */,
 				85C10DB022D06B6200C91888 /* Resources */,
+				56FB5B7ACF40DB6FC2480613 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -158,6 +203,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 85C10DDD22D06B6500C91888 /* Build configuration list for PBXNativeTarget "WordGameTests" */;
 			buildPhases = (
+				B12B8731E7E72BBA6CFC4DF5 /* [CP] Check Pods Manifest.lock */,
 				85C10DC222D06B6500C91888 /* Sources */,
 				85C10DC322D06B6500C91888 /* Frameworks */,
 				85C10DC422D06B6500C91888 /* Resources */,
@@ -176,6 +222,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 85C10DE022D06B6500C91888 /* Build configuration list for PBXNativeTarget "WordGameUITests" */;
 			buildPhases = (
+				CC921BB8B0A73B0BA6A5723C /* [CP] Check Pods Manifest.lock */,
 				85C10DCD22D06B6500C91888 /* Sources */,
 				85C10DCE22D06B6500C91888 /* Frameworks */,
 				85C10DCF22D06B6500C91888 /* Resources */,
@@ -239,6 +286,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				85C10DC022D06B6400C91888 /* LaunchScreen.storyboard in Resources */,
+				855A8B2C22E8B8EE0064888B /* GoogleService-Info.plist in Resources */,
 				85C10DBD22D06B6400C91888 /* Assets.xcassets in Resources */,
 				85C10DBB22D06B6200C91888 /* Main.storyboard in Resources */,
 			);
@@ -260,6 +308,92 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		280630B72D92569461C51FD8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WordGame-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		56FB5B7ACF40DB6FC2480613 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WordGame/Pods-WordGame-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WordGame/Pods-WordGame-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WordGame/Pods-WordGame-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B12B8731E7E72BBA6CFC4DF5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WordGameTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CC921BB8B0A73B0BA6A5723C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WordGameUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		85C10DAE22D06B6200C91888 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -269,7 +403,7 @@
 				85C10DB822D06B6200C91888 /* ViewController.swift in Sources */,
 				85C10DB622D06B6200C91888 /* AppDelegate.swift in Sources */,
 				85C10DE622D0720700C91888 /* WordCollectionViewCell.swift in Sources */,
-				85C10DE422D06B7500C91888 /* GameHelper.swift in Sources */,
+				85C10DE422D06B7500C91888 /* FirebaseManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -442,6 +576,7 @@
 		};
 		85C10DDB22D06B6500C91888 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3411C6F3F14F53018CC9322B /* Pods-WordGame.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -461,6 +596,7 @@
 		};
 		85C10DDC22D06B6500C91888 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 852D385B6237496D26A7CE66 /* Pods-WordGame.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -480,6 +616,7 @@
 		};
 		85C10DDE22D06B6500C91888 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2EC66C673F83A27448BD4674 /* Pods-WordGameTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -501,6 +638,7 @@
 		};
 		85C10DDF22D06B6500C91888 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8BC8108709A88CF76CAB8B26 /* Pods-WordGameTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -522,6 +660,7 @@
 		};
 		85C10DE122D06B6500C91888 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A6F05D4C633BC261A777A69B /* Pods-WordGameUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -542,6 +681,7 @@
 		};
 		85C10DE222D06B6500C91888 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0CE3153B95A7AA85B998751C /* Pods-WordGameUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

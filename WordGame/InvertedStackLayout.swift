@@ -21,18 +21,16 @@ class InvertedStackLayout: UICollectionViewLayout {
         var layoutAttrs = [UICollectionViewLayoutAttributes]()
         if let collectionView = self.collectionView {
             for section in 0 ..< collectionView.numberOfSections {
-                if let numberOfSectionItems = numberOfItemsInSection(section) {
-                    for item in 0 ..< numberOfSectionItems {
-                        let indexPath = IndexPath(item: item, section: section)
-                        let layoutAttr = layoutAttributesForItem(at: indexPath)
-                        if let layoutAttr = layoutAttr {
-                            layoutAttrs.append(layoutAttr)
-                        }
+                let numberOfSectionItems = collectionView.numberOfItems(inSection: section)
+                for item in 0 ..< numberOfSectionItems {
+                    let indexPath = IndexPath(item: item, section: section)
+                    let layoutAttr = layoutAttributesForItem(at: indexPath)
+                    if let layoutAttr = layoutAttr {
+                        layoutAttrs.append(layoutAttr)
                     }
                 }
             }
         }
-        
         return layoutAttrs
     }
     
@@ -44,10 +42,6 @@ class InvertedStackLayout: UICollectionViewLayout {
         print("indexpath -> \(indexPath.item)")
         layoutAttr.frame = CGRect(x: x, y: y, width: cellSize, height: cellSize)
         return layoutAttr
-    }
-    
-    func numberOfItemsInSection(_ section: Int) -> Int? {
-        return numOfCells
     }
     
     override var collectionViewContentSize: CGSize {

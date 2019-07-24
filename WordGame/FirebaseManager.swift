@@ -14,9 +14,9 @@ protocol GameHelperDelegate {
     func resetUI()
 }
 
-class GameHelper: NSObject {
+class FirebaseManager: NSObject {
     
-    static let shared = GameHelper()
+    static let shared = FirebaseManager()
     
     var delegate: GameHelperDelegate?
     var fullWordArray: [String] = []
@@ -37,7 +37,7 @@ class GameHelper: NSObject {
         for index in formedWordIndex {
             formedWordArray.append(fullWordArray[index])
         }
-        let isWordCorrect = GameHelper.shared.evaluate(word: formedWordArray)
+        let isWordCorrect = FirebaseManager.shared.evaluate(word: formedWordArray)
         if isWordCorrect {
             for index in formedWordIndex {
                 fullWordArray[index] = ""
@@ -66,11 +66,11 @@ class GameHelper: NSObject {
                         index = index - 5
                     }
                     if fullWordArray[lastEmptyIndex].isEmpty {
-                        fullWordArray[lastEmptyIndex] = GameHelper.shared.generateNewTiles(tileCount: 1).first ?? "*"
+                        fullWordArray[lastEmptyIndex] = FirebaseManager.shared.generateNewTiles(tileCount: 1).first ?? "*"
                     }
                 }
             } else {
-                fullWordArray[lastEmptyIndex] = GameHelper.shared.generateNewTiles(tileCount: 1).first ?? "*"
+                fullWordArray[lastEmptyIndex] = FirebaseManager.shared.generateNewTiles(tileCount: 1).first ?? "*"
             }
             replaceNewWords()
         }

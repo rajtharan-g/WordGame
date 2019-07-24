@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8551AD4A22E85464001BC6C8 /* InvertedStackLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8551AD4922E85464001BC6C8 /* InvertedStackLayout.swift */; };
 		85C10DB622D06B6200C91888 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C10DB522D06B6200C91888 /* AppDelegate.swift */; };
 		85C10DB822D06B6200C91888 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C10DB722D06B6200C91888 /* ViewController.swift */; };
 		85C10DBB22D06B6200C91888 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85C10DB922D06B6200C91888 /* Main.storyboard */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8551AD4922E85464001BC6C8 /* InvertedStackLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvertedStackLayout.swift; sourceTree = "<group>"; };
 		85C10DB222D06B6200C91888 /* WordGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WordGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85C10DB522D06B6200C91888 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		85C10DB722D06B6200C91888 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 				85C10DC122D06B6400C91888 /* Info.plist */,
 				85C10DE322D06B7500C91888 /* GameHelper.swift */,
 				85C10DE522D0720700C91888 /* WordCollectionViewCell.swift */,
+				8551AD4922E85464001BC6C8 /* InvertedStackLayout.swift */,
 			);
 			path = WordGame;
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8551AD4A22E85464001BC6C8 /* InvertedStackLayout.swift in Sources */,
 				85C10DB822D06B6200C91888 /* ViewController.swift in Sources */,
 				85C10DB622D06B6200C91888 /* AppDelegate.swift in Sources */,
 				85C10DE622D0720700C91888 /* WordCollectionViewCell.swift in Sources */,
@@ -443,6 +447,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GAD2ZSQLM4;
 				INFOPLIST_FILE = WordGame/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -461,6 +466,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GAD2ZSQLM4;
 				INFOPLIST_FILE = WordGame/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

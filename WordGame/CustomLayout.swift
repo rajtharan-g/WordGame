@@ -8,6 +8,7 @@
 
 import UIKit
 
+// Custom layout to implement data source from bottom right
 class CustomLayout: UICollectionViewLayout {
     
     var cellSize: CGFloat = 0.0
@@ -48,10 +49,10 @@ class CustomLayout: UICollectionViewLayout {
     override var collectionViewContentSize: CGSize {
         get {
             if let collectionViewBounds = self.collectionView?.bounds {
-                if UIDevice.current.orientation.isLandscape {
-                    cellSize = UIScreen.main.bounds.height / CGFloat(numOfTiles)
+                if UIDevice.current.orientation.isLandscape { // Handling device orientation
+                    cellSize = collectionViewBounds.height / CGFloat(numOfTiles)
                 } else {
-                    cellSize = UIScreen.main.bounds.width / CGFloat(numOfTiles)
+                    cellSize = collectionViewBounds.width / CGFloat(numOfTiles)
                 }
                 return collectionViewBounds.size
             }
